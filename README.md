@@ -4,7 +4,7 @@
 Mansa-Musah
 
 ## Description
-This is an application to track wildlife in Douglas fir forest for a case study on whether the forest authority should allow deforestation or not. This application allows rangers to track wildlife sightings in the area.
+This is an application to track wildlife in forest for a case study on whether the forest authority should allow deforestation or not. This application allows rangers to track wildlife sightings in the area.
 ## Prerequisites
 
 - Basic Git knowledge, including an installed version of Git.
