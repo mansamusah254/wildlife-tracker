@@ -1,70 +1,62 @@
 # WILDLIFE TRACKER
 
 ## Author
-Mburiah
+Mansa-Musah
 
 ## Description
 This is an application to track wildlife in Douglas fir forest for a case study on whether the forest authority should allow deforestation or not. This application allows rangers to track wildlife sightings in the area.
+## Prerequisites
 
- 
-[![codebeat badge](https://codebeat.co/badges/f2e546bf-751a-41f7-b9cd-8fe4bbca4067)](https://codebeat.co/projects/github-com-mburiah-wildlife-tracker-master)
-## Functionality
+- Basic Git knowledge, including an installed version of Git.
+- Your application must run on the OpenJDK version 6, 7 or 8.
 
- | Input | Description| Output |
- |:---    | ---: | ---: |
- | Add animal | click on the add animal button | animal added to list. |   
- | Add sighting | click on add sighting button  | new sighting is added  |
- | View animals/ sightings | click on link on the navigation bar | all recorded animals and sightings are seen |
- 
+## Technologies Used
+
+- Java v9
+- Gradle
+- Spark Framework
+- CSS (Bootstrap)
+- JUnit v4.12
+- Jacoco Plugin
 
 
-## Pre-requisites
-1.You need to have java installed. You can use [sdkman](https://sdkman.io/).
-Follow the instructions on the _sdkman_ installation process. Then install java:
- ```bash
-sdk install java
- ```
+## Setup Installations Requirements
+* To run the application, in your terminal:
 
-2.Gradle
-This is a build tool for the java app, you can install it through sdkman:
-```bash
-sdk install gradle
-```
-## Setup
-1. You will need Internet connection.
+ 1. Clone or download the Repository
+ 2. cd into directory then run `cd Hero-Squad`
+ 3. Rebuild the Project Using Intellij IDEA or ...
+ 4. Open terminal command line then navigate to the root folder of the application.
+ 5. Run `gradle run` command.
+ 6. Navigate to `http://localhost:4567/` in your browser.
 
-2. Get to this Wildlife-tracker repo on github.
 
-Link:-> ```https://github.com/Mburiah/Wildlife-Tracker.git```
+### Development
 
-3. From there you can access the Hero-Squad.
+Want to contribute? Great!
 
-4. **Clone** the project.
+To fix a bug or enhance an existing module, follow these steps:
 
-5. **get into project folder** (cd into project).
+- Fork the repo
+- Create a new branch (`git checkout -b improve-feature`)
+- Make the appropriate changes in the files
+- Add changes to reflect the changes made
+- Commit your changes (`git commit -am 'Improve feature'`)
+- Push to the branch (`git push origin improve-feature`)
+- Create a Pull Request
 
-6. If you have all the **Pre-requisites** you can run the application.
- ``` bash
-gradle run
- ```
-navigate to localhost:4567 to view the website.
+## Known Bugs
 
-### Database;
-7. Install postgres. Once ready, type *psql* on the terminal. Create User with password, Make sure to edit the DB.java file with the credentials created in order to connect to your database.
-8. Create tables to store animals and sightings details: user# CREATE DATABASE wild_track;
-9. Navigate to wild_track database, then wild_track# CREATE TABLE animals ( animal_id int, animal_age int, animal_name string);
-10. Create  sightings table: wild_track# CREATE TABLE sightings ( animal string, location string, ranger_name string );
-11. Connect to database: \c
+No known bugs so far if there are reach out to my email: mansamusah830@gmail.com.
 
-##Technologies used
-- Java , intellij IDEA
-- **[Maven] (https://maven.apache.org/)**
-- Heroku CLI
-- Bootstrap.
-- Cascading Style Sheets.
-- Handlebars.
 
-## Contributions and support.
-In case of any issues, bugs, or you would like to contribute or support, contact me via: 
-- Email :- mburiahb@gmail.com.
-- Github-Username :- Mburiah
+### License
+
+*MIT*
+Copyright (c) 2022 **mansamusah**
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
