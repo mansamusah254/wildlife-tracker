@@ -1,0 +1,14 @@
+                                    List of databases
+     Name      |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
+---------------+----------+----------+-------------+-------------+-----------------------
+ mansa         | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ moringa       | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ musa          | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres      | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ template0     | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+               |          |          |             |             | postgres=CTc/postgres
+ template1     | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/postgres          +
+               |          |          |             |             | postgres=CTc/postgres
+ test_database | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+(7 rows)
+
