@@ -31,8 +31,7 @@ public class Sighting {
         return id;
     }
 
-    @Override
-    
+
     public void add(){
         try(Connection conn =  DB.sql2o.open()){
             String sql = "INSERT INTO sightings(animal, location, ranger_name) VALUES(:animal, :location, :ranger_name)";
