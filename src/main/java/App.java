@@ -48,7 +48,7 @@ public class App {
             String location = request.queryParams("location");
             String ranger_name = request.queryParams("ranger_name");
             Sighting newSighting = new Sighting(animal_name,location, ranger_name);
-            newSighting.add();
+            newSighting.save();
             response.redirect("/");
             return  null;
         });
