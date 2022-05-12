@@ -1,4 +1,6 @@
 import org.sql2o.Connection;
+import org.sql2o.Sql2oException;
+
 import java.util.List;
 
 public class Animal {
@@ -24,18 +26,24 @@ public class Animal {
         return animal_name;
     }
 
-    public void add(){
+    public void save(){
         try(Connection conn = DB.sql2o.open()){
-            conn.createQuery("insert into animals(animal_id, animal_age, animal_name ) VALUES(:animal_id, :animal_age, :animal_name ) ")
+            String sql = "INSERT INTO animals(animal_id, animal_age, animal_name ) VALUES(:animal_id, :animal_age, :animal_name )";
+            this.animal_id = (int ) conn.createQuery(sql , true)
                     .addParameter("animal_id", this.animal_id)
                     .addParameter("animal_age", this.animal_age)
                     .addParameter("animal_name", this.animal_name)
-                    .executeUpdate();
+                    .executeUpdate()
+                    .getKey();
         }
     }
-    public static List <Animal> getAll(){
+    public static List <Animal> all(){
+        String sql = "SELECT * FROM animals";
         try (Connection conn = DB.sql2o.open()){
-            return conn.createQuery("select * from animals").executeAndFetch(Animal.class);
+            return conn.createQuery(sql).executeAndFetch(Animal.class);
+        } catch (Sql2oException ex){
+            System.out.println(ex);
+            return null;
         }
     }
 }

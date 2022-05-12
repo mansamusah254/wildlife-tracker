@@ -1,4 +1,6 @@
 import org.sql2o.Connection;
+import org.sql2o.Sql2oException;
+
 import java.util.List;
 
 public class Sighting {
@@ -32,7 +34,7 @@ public class Sighting {
     }
 
 
-    public void add(){
+    public void save(){
         try(Connection conn =  DB.sql2o.open()){
             String sql = "INSERT INTO sightings(animal, location, ranger_name) VALUES(:animal, :location, :ranger_name)";
             this.id = (int) conn.createQuery(sql,true)
@@ -43,9 +45,13 @@ public class Sighting {
                     .getKey();
         }
     }
-    public static List<Sighting> getAll(){
-        try (Connection conn = DB.sql2o.open()) {
-            return conn.createQuery("select *from sightings").executeAndFetch(Sighting.class);
+    public static List<Sighting> all(){
+        String sql = "SELECT * FROM sightings";
+        try (Connection conn = DB.sql2o.open()){
+            return conn.createQuery(sql).executeAndFetch(Sighting.class);
+        } catch (Sql2oException ex){
+            System.out.println(ex);
+            return null;
         }
     }
 }
